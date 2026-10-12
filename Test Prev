@@ -331,14 +331,15 @@ makeSlider(speedPage, UDim2.new(0, 58, 0, 100), UDim2.new(1, -58, 0, 46), MIN_SP
 		if final then setStatus("Select a target first.", false) end
 		return
 	end
-	-- Knappen vil forsøge at sende signalet ud, men vil fejle uden Part 1 aktiv på serveren
 	if final then setStatus("Kan ikke ændre andres fart uden server-adgang.", false) end
 end)
 
 makeLabel(speedPage, "Target Selector", UDim2.new(0, 0, 0, 160), UDim2.new(1, 0, 0, 18), 15)
-Vær forsigtig med at bruge denne kode.
+
 local selectedLabel = makeLabel(speedPage, "Selected: none", UDim2.new(0, 0, 0, 182), UDim2.new(1, 0, 0, 18), 13)
 selectedLabel.TextColor3 = Color3.fromRGB(170, 200, 255)
+
+Vær forsigtig med at bruge denne kode.
 local showListButton = makeButton(speedPage, "Show Player List", UDim2.new(0, 0, 0, 206), UDim2.new(1, 0, 0, 32))
 local listFrame = Instance.new("ScrollingFrame")
 listFrame.Position = UDim2.new(0, 0, 0, 244)
